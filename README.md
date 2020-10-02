@@ -1,4 +1,5 @@
 # CorneECWL
+![](img/main.JPG)
 
 - [部品リスト](#部品リスト)
   - [キットに同梱されている部品](#キットに同梱されている部品)
@@ -46,18 +47,18 @@
 
 |部品|数|入手先|
 |-|-|-|
-|Pro MicroまたはBLE Micro Pro|2|
-|12ピンコンスルーまたはピンヘッダ|4|
-|NIZ EC Switch|42|
-|ラバードーム|必要分|
-|コニックリング|42|
+|Pro MicroまたはBLE Micro Pro|2|https://booth.pm/ja/items/1177319, https://yushakobo.jp/shop/ble-micro-pro/|
+|12ピンコンスルーまたはピンヘッダ|4|https://yushakobo.jp/shop/a01mc-00/, https://talpkeyboard.stores.jp/items/5e056626d790db16e2889233|
+|NIZ EC Switch|42|https://www.nizkeyboard.com/collections/ornaments/products/2019-new-niz-ec-switch|
+|ラバードーム|必要分|https://www.nizkeyboard.com/collections/ornaments/products/ec-silicone-domes-35g-45g-55g, https://btoshop.jp/2020/09/25/adelcpru/|
+|コニックリング|42|https://btoshop.jp/2020/09/25/adelcps/|
 ||||
 |**Pro Microを使う場合**|||
 |TRRSケーブル|1|
 |USBケーブル|1|
 ||||
 |**BLE Micro Proを使う場合**|||
-|電池基板|2||
+|電池基板|2|https://nogikes.booth.pm/items/1655285, https://yushakobo.jp/shop/ble-micro-pro-battery-board/|
 
 ## 組み立て手順
 ### 裏面の表面実装部品を取り付ける
@@ -117,16 +118,18 @@
 
 ## ファームウェア
 ### Pro Microの場合
+- リポジトリを取得
+    https://github.com/sekigon-gonnoc/qmk_firmware/tree/dev/crkbd_ecwl
 
 - 左手に書き込む
-```
-make crkbd_ecwl/default:avrdude-split-left
-```
+    ```
+    make crkbd_ecwl/default:avrdude-split-left
+    ```
 
 - 右手に書き込む
-```
-make crkbd_ecwl/default:avrdude-split-right
-```
+    ```
+    make crkbd_ecwl/default:avrdude-split-right
+    ```
 
 ### BLE Micro Proの場合
 
