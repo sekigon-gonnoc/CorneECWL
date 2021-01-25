@@ -122,17 +122,29 @@
 ## ファームウェア
 ### Pro Microの場合
 - リポジトリを取得
-    https://github.com/sekigon-gonnoc/qmk_firmware/tree/dev/crkbd_ecwl
+  - https://github.com/sekigon-gonnoc/qmk_firmware/tree/dev/crkbd_ecwl  
+  - 静電容量スイッチが読み取れるかは空のキーマップで確認します  
+  - キーボードの左右の識別にはEE_HANDSを使用しているので、最初の書き込みには`-split-left`または`-split-right`をつけてください  
 
 - 左手に書き込む
-    ```
-    make crkbd_ecwl/default:avrdude-split-left
-    ```
+  ```
+  make crkbd_ecwl:blank:avrdude-split-left
+  ```
 
 - 右手に書き込む
-    ```
-    make crkbd_ecwl/default:avrdude-split-right
-    ```
+  ```
+  make crkbd_ecwl:blank:avrdude-split-right
+  ```
+
+- キースキャン結果を確認する
+  - qmk_toolboxまたはhid_listenでキーボードに接続するとUSB接続したほうの手のスキャン結果AD変換値が表示されます  
+  - デフォルトの閾値はH:300, L:200です。閾値を変更する場合はmatrix.cを編集してください
+  - キースキャンの結果に問題がなければ、有効なキーマップを書き込んでください
+
+- キーマップを書き込む
+  ```
+  make crkbd_ecwl:default:flash
+  ```
 
 ### BLE Micro Proの場合
 
