@@ -9,3 +9,4 @@ Crkbd with Niz EC switch
   ![](img/main.JPG)
 - Corne EC (DIP modules, XIAO)
   - [ビルドガイド](CorneEC/CorneEC_ja.md)
+  ![](img/corne_ec.JPG)
